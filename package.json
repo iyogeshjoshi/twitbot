@@ -1,0 +1,15 @@
+{
+  "name": "twitterbot",
+  "version": "0.0.0",
+  "description": "to fetch teachers details from followerswonk",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yogesh Joshi <iyogeshjoshi@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^1.1.20"
+  },
+  "devDependencies": {}
+}
