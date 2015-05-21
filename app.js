@@ -44,7 +44,7 @@ var Bot = new Twit({
 });*/
 
 // getting random message
-var status = null,
+/*var status = null,
 		username = null;
 
 setInterval(function(){
@@ -67,3 +67,20 @@ var postStatus = function(status, cb) {
 	else
 		cb('No status provided!!');
 };
+*/
+
+//sending message to the followers
+var stream = Bot.stream('user');
+stream.on('follow', function (eventMsg) {
+	 var username = eventMsg.source.screen_name;
+	 Bot.post('direct_messages/new',{ screen_name: username, text:"Heya wassup ;)"},function (err, data, response){
+				if(err === null)
+				{
+					console.log("message posted");
+				}
+				else
+				{
+					console.log(err.message);
+				}
+	});
+});
