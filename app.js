@@ -22,52 +22,6 @@ var Bot = new Twit({
 	access_token_secret: Config.access_token_secret
 });
 
-/*Bot.get('search/tweets', {q:'learnise since:2014-01-01', count:10},function(err, data, res){
-	if(err){
-		console.error(err);
-	}
-	console.log(data);
-});
-*/
-
-/*Bot.get('following/ids', {screen_name: 'iyogeshjoshi'}, function(err, data, res){
-	if(err) console.error(err);
-	console.log('Users following @iyogeshjoshi', data);
-});
-*/
-
-/*Bot.post('statuses/update', {status: 'Living Life #MohMaaya ;)'}, function(err, data, res){
-	if(err) {
-		console.error(err);
-	}
-	console.log(data);
-});*/
-
-// getting random message
-/*var status = null,
-		username = null;
-
-setInterval(function(){
-	status = Feed.messages[Math.floor(Math.random() * Feed.messages.length)];
-	username = Feed.usernames[Math.floor(Math.random() * Feed.usernames.length)];
-
-	status += ' @'+username + ' #testingApi';
-	postStatus(status, function(err, data, res){
-		if(err){
-			console.error(err);
-		} else {
-			console.log(data);
-		}
-	});
-}, 10*1000 );
-
-var postStatus = function(status, cb) {
-	if(status)
-		Bot.post('statuses/update', {status: status}, cb);
-	else
-		cb('No status provided!!');
-};
-*/
 
 //sending message to the followers
 var stream = Bot.stream('user');
